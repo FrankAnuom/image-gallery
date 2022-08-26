@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <!--<meta charset="utf-8">-->
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--<div class="container">
+            <h13 class="heading">Type to search images</h13>
+            <input type="text" placeholder="search images" id="search-box">
+        </div>-->
+        <header>
+<h1>Photo Gallery</h1>
+<!--<div class="container">
+    <h13 class="heading">Type to search Photos</h13>
+    <input type="text" placeholder="search Photos" id="search-box">
+</div>-->
+        </header><br/>
+        
+        <div class="full-img" id="fullImgBox">
+            <img src="hyndis.jpg" id="fullImg">
+            <span onclick="closeFullImg()">x</span>
+        </div>
+        <div class="img-gallery">
+            <div class="image" data-title>
+    <img src="hyndis.jpg">
+    <h2>Fred</h2>
+            </div>
+    <div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h2>john</h2>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+<h3>Peter</h3>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+<h4>Joy</h4>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h5>Henry</h5>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h6>Kate</h6>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h7>car</h7>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h8>king</h8>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h9>lee</h9>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h10>boy</h10>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h11>nora</h11>
+</div>
+<div class="image" data-title>
+    <img src="hyndis.jpg" onclick="openFullImg(this.src)">
+    <h12>kane</h12>
+</div>
+        </div>
+
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+function openFullImg(pic){
+    fullImgBox.style.display = "flex";
+    fullImg.src = pic;
+}
+function closeFullImg(){
+    fullImgBox.style.display = "none";
+
+}
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.container .image')
+
+searchBox.Oninput = () =>{
+    images.forEach(hide => hide.style.display = none);
+    let value = searchBox.value;
+    images.forEach(filter =>{
+        let title = filter.getAttribute('data-title');
+        if(value == tittle){
+            filter.style.display = 'block';
+        }
+    });
+};
+
+</script>
+<footer>
+    <h2>&copy; Copyright Reserved:Virgin.</h2>
+            </footer>
+    </body>
+</html>
